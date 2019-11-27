@@ -9,22 +9,22 @@ function cardTypeCheck() {
   } else if ((num.slice(0, 4) == "6011" || num[0] == "5") && num.length == 15) {
     validateDiscover(num);
   } else {
-    console.log("Not a valid card number");
+    alert("Not a valid card number");
   }
 }
 
 function validateVisa(cardNum) {
-  console.log("Type: Visa");
+  alert("Type: Visa");
 }
 
 function validateDiscover(cardNum) {
-  console.log("Type: Discover");
+  alert("Type: Discover");
 }
 
 function validateAmex(cardNum) {
   if (cardNum[0] !== "3" || (cardNum[1] !== "4" && cardNum[1] !== "7")) {
-    console.log("not a valid card number");
+    alert("not a valid card number");
   } else {
-    console.log("Type: American Express");
+    alert("Type: American Express");
   }
 }

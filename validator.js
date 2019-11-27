@@ -7,7 +7,7 @@ function cardTypeCheck() {
     console.log("not a valid card number");
   } else if (num.length == 15) {
     validateAmex(num);
-  } else if (num.length == 16 || num.length == 13 || num[0] == "4") {
+  } else if ((num.length == 16 || num.length == 13) && num[0] == "4") {
     validateVisa(num);
   }
 }
@@ -17,7 +17,7 @@ function validateVisa(cardNum) {
 }
 
 function validateAmex(cardNum) {
-  if (cardNum[0] !== "3" || cardNum[1] !== "4" || cardNum[1] !== "7") {
+  if ((cardNum[0] !== "3" && cardNum[1] !== "4") || cardNum[1] !== "7") {
     console.log("not a valid card number");
   } else {
     console.log("Type: American Express");
